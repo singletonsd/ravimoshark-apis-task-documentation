@@ -1,0 +1,61 @@
+image: "${GLOBAL_IMAGE_NAME}:${GLOBAL_IMAGE_TAG}"
+
+# https://gitlab.com/patoperpetua/pipelines-npm/tree/master/src
+include:
+  - project: 'singletonsd/pipelines/npm'
+    file: '/src/.gitlab-ci-main.yml'
+
+variables:
+  GLOBAL_IMAGE_NAME: "node"
+  GLOBAL_IMAGE_TAG: "8-alpine"
+  TEST_STATIC_ALL: "true"
+  TEST_DYNAMIC_EXECUTE_8: "true"
+  ORIGINAL_REPOSITORY: ravimosharksas/apis/task/documentation
+
+stages:
+  - install
+  - test_static
+  - build
+  - test_dynamic
+  - deploy
+  - notify
+
+pages:
+  stage: deploy
+  before_script:
+    - if [ "${CI_COMMIT_REF_NAME}" == "master" ]; then
+        export TARGET_FOLDER=public;
+      else
+        export TARGET_FOLDER=public/${CI_COMMIT_REF_NAME};
+      fi
+    - echo "Saving html into ${TARGET_FOLDER} directory..."
+  script:
+    - rm -rf "${TARGET_FOLDER}"
+    - mkdir -p "${TARGET_FOLDER}"
+    - cp -r dist/* "${TARGET_FOLDER}"
+  artifacts:
+    paths:
+      - public
+  only:
+    refs:
+      - master
+    changes:
+      - spec/**/*
+      - .gitlab-ci.yml
+      - package.json
+
+trigger_libs:
+  stage: notify
+  before_script:
+    - apk add --no-cache curl
+  script:
+    - "curl -X POST -F token=${TRIGGER_RAVIMO_API_CONTRACT_LIB_ANGULAR} -F ref=master https://gitlab.com/api/v4/projects/14528936/trigger/pipeline"
+  only:
+    refs:
+      - master
+    changes:
+      - spec/**/*
+      - .gitlab-ci.yml
+      - package.json
+    variables:
+      - $CI_PROJECT_PATH == $ORIGINAL_REPOSITORY
