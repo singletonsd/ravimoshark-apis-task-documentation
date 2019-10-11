@@ -1,0 +1,49 @@
+get:
+  tags:
+    - "Technicians"
+  summary: "Get one technician."
+  description: "Get one technician."
+  operationId: "getTechnicianById"
+  parameters:
+    - $ref: "#/components/parameters/Id"
+    - $ref: "#/components/parameters/Deleted"
+  responses:
+    200:
+      description: "Request OK."
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/Technicians"
+    400:
+      $ref: "#/components/responses/400"
+    401:
+      $ref: "#/components/responses/401"
+    404:
+      $ref: "#/components/responses/404"
+    405:
+      $ref: "#/components/responses/405"
+  x-swagger-router-controller: "Technicians"
+delete:
+  tags:
+    - "Technicians"
+  summary: "Delete one technician."
+  description: "Delete one technician."
+  operationId: "deleteTechnician"
+  parameters:
+    - $ref: "#/components/parameters/Id"
+  responses:
+    200:
+      description: "Request OK."
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/IdInteger"
+    400:
+      $ref: "#/components/responses/400"
+    401:
+      $ref: "#/components/responses/401"
+    404:
+      $ref: "#/components/responses/404"
+    405:
+      $ref: "#/components/responses/405"
+  x-swagger-router-controller: "Technicians"

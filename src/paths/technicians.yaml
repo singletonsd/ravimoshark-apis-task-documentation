@@ -1,0 +1,99 @@
+get:
+  tags:
+    - "Technicians"
+  summary: "Get all technicians."
+  description: "Get all technicians."
+  operationId: "getTechnicians"
+  parameters:
+    - $ref: "#/components/parameters/Skip"
+    - $ref: "#/components/parameters/Limit"
+    - $ref: "#/components/parameters/OrderBy"
+    - $ref: "#/components/parameters/Filter"
+    - $ref: "#/components/parameters/Deleted"
+    - $ref: "#/components/parameters/Metadata"
+    - $ref: "#/components/parameters/RefClientQuery"
+  responses:
+    200:
+      description: "Request OK."
+      headers:
+        - $ref: "#/components/headers/Limit"
+        - $ref: "#/components/headers/Remaining"
+        - $ref: "#/components/headers/Reset"
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              metadata:
+                $ref: "#/components/schemas/Metadata"
+              items:
+                type: "array"
+                items:
+                  $ref: "#/components/schemas/Technicians"
+    204:
+      $ref: "#/components/responses/204"
+    400:
+      $ref: "#/components/responses/400"
+    401:
+      $ref: "#/components/responses/401"
+    404:
+      $ref: "#/components/responses/404"
+    405:
+      $ref: "#/components/responses/405"
+  x-swagger-router-controller: "Technicians"
+post:
+  tags:
+    - "Technicians"
+  summary: "Add one technician."
+  description: "Add one technician."
+  operationId: "addTechnician"
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: "#/components/schemas/Technicians"
+  responses:
+    200:
+      description: "Request OK."
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/Technicians"
+    400:
+      $ref: "#/components/responses/400"
+    401:
+      $ref: "#/components/responses/401"
+    404:
+      $ref: "#/components/responses/404"
+    405:
+      $ref: "#/components/responses/405"
+  x-swagger-router-controller: "Technicians"
+put:
+  tags:
+    - "Technicians"
+  summary: "Edit one technician."
+  description: "Edit one technician."
+  operationId: "editTechnician"
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: "#/components/schemas/Technicians"
+  responses:
+    200:
+      description: "Request OK."
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/Technicians"
+    400:
+      $ref: "#/components/responses/400"
+    401:
+      $ref: "#/components/responses/401"
+    404:
+      $ref: "#/components/responses/404"
+    405:
+      $ref: "#/components/responses/405"
+  x-swagger-router-controller: "Technicians"
