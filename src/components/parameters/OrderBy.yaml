@@ -1,0 +1,6 @@
+name: "orderBy"
+description: "order by property."
+in: "query"
+required: false
+schema:
+  type: "string"

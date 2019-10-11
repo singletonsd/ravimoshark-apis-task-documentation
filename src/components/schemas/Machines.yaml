@@ -1,0 +1,20 @@
+description: Client's machines associated with a contract.
+type: object
+properties:
+  id:
+    type: integer
+    format: int64
+  refArticle:
+    type: string
+  piece:
+    $ref: "#/components/schemas/Pieces"
+  serialNumber:
+    type: string
+  createdAt:
+    type: string
+    format: date
+  updatedAt:
+    type: string
+    format: date
+  deleted:
+    type: boolean

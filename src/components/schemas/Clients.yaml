@@ -1,0 +1,11 @@
+description: Client minimum information.
+type: object
+properties:
+  refClient:
+    type: string
+  name:
+    type: string
+  nickname:
+    type: string
+  group:
+    type: string

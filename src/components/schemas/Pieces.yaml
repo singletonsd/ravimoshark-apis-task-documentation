@@ -1,0 +1,7 @@
+description: Pieces minimum information.
+type: object
+properties:
+  refArticle:
+    type: string
+  name:
+    type: string
