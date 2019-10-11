@@ -4,12 +4,12 @@
   "dependencies": {},
   "private": true,
   "scripts": {
-    "start": "swagger-repo serve",
+    "start": "swagger-repo serve -b src",
     "clear-watcher": "echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p",
     "static": "npm run build && static dist",
-    "build": "swagger-repo build -o dist",
-    "test": "swagger-repo validate",
-    "gh-pages": "rm -rf web_deploy && mkdir -p web_deploy && cp -r dist/* web_deploy && swagger-repo gh-pages",
+    "build": "swagger-repo build -b src -o dist",
+    "test": "swagger-repo validate -b src",
+    "gh-pages": "rm -rf web_deploy && mkdir -p web_deploy && cp -r dist/* web_deploy && swagger-repo gh-pages -b src",
     "swagger-repo": "swagger-repo",
     "create-openapi-repo": "create-openapi-repo"
   },
