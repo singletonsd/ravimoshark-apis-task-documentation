@@ -1,0 +1,40 @@
+openapi: 3.0.0
+info:
+  version: 1.0.0
+  title: Ravimoshark Task API
+  termsOfService: 'https://ravimoshark.com/terms/'
+  contact:
+    email: dev@ravimoshark.com
+    url: 'http://ravimoshark.com/contact'
+  license:
+    name: Apache 2.0
+    url: 'http://www.apache.org/licenses/LICENSE-2.0.html'
+  description: >
+    This is an API to interact with Ravimoshark task database.
+
+    # Introduction
+
+    This API allow to create, modify and delete task, visits, technicians and interventions.
+
+    # User Authentication
+
+    This API does not contain any kind of user validation but It request to have
+    a valid authentication user to interact with it.
+    For more information about user Authentication, please refer to
+    [Ravimoshark User Authentication](https://ravimoshark.com/back/apis/auth/latest).
+externalDocs:
+  description: Find out how to interact with Ravimoshark's APIs.
+  url: 'https://ravimoshark.com/back/apis/auth/latest'
+tags:
+  - name: Tasks
+    description: Operations about tasks.
+  - name: Visits
+    description: Operations about visits.
+  - name: Interventions
+    description: Operations about interventions.
+  - name: Technicians
+    description: Operations about technicians.
+servers:
+  - url: 'http://localhost:8001'
+  - url: 'https://ravimoshark.com/back/apis/task/v1'
+  - url: 'https://ravimoshark.com/back/apis/task/latest'
