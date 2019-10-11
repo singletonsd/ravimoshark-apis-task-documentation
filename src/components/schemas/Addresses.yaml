@@ -8,3 +8,30 @@ properties:
     type: string
   client:
     $ref: "#/components/schemas/Clients"
+  addressType:
+    type: string
+  delivery:
+    type: string
+  city:
+    type: string
+  complement:
+    type: string
+  country:
+    type: string
+  latitude:
+    type: number
+    format: float
+  longitude:
+    type: number
+    format: float
+  name:
+    type: string
+  postalCode:
+    type: string
+  streetName:
+    type: string
+  streetNumber:
+    type: integer
+    format: int64
+  telephone:
+    type: string

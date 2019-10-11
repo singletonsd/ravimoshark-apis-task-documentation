@@ -1,9 +1,9 @@
 get:
   tags:
-    - "Tasks"
-  summary: "Get one task."
-  description: "Get one task."
-  operationId: "getTaskById"
+    - "Visits"
+  summary: "Get one visit."
+  description: "Get one visit."
+  operationId: "getVisitById"
   parameters:
     - $ref: "#/components/parameters/Id"
     - $ref: "#/components/parameters/Deleted"
@@ -13,7 +13,7 @@ get:
       content:
         application/json:
           schema:
-            $ref: "#/components/schemas/Tasks"
+            $ref: "#/components/schemas/Visits"
     400:
       $ref: "#/components/responses/400"
     401:
@@ -22,13 +22,13 @@ get:
       $ref: "#/components/responses/404"
     405:
       $ref: "#/components/responses/405"
-  x-swagger-router-controller: "Tasks"
+  x-swagger-router-controller: "Visits"
 delete:
   tags:
-    - "Tasks"
-  summary: "Delete one task."
-  description: "Delete one task."
-  operationId: "deleteTask"
+    - "Visits"
+  summary: "Delete one visit."
+  description: "Delete one visit."
+  operationId: "deleteVisit"
   parameters:
     - $ref: "#/components/parameters/Id"
   responses:
@@ -46,4 +46,4 @@ delete:
       $ref: "#/components/responses/404"
     405:
       $ref: "#/components/responses/405"
-  x-swagger-router-controller: "Tasks"
+  x-swagger-router-controller: "Visits"

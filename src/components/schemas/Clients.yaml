@@ -9,3 +9,12 @@ properties:
     type: string
   group:
     type: string
+  addresses:
+    type: array
+    items:
+      $ref: "#/components/schemas/Addresses"
+  addressesId:
+    type: array
+    items:
+      type: integer
+      format: int64

@@ -1,4 +1,4 @@
-description: Task information.
+description: Visit information.
 type: object
 properties:
   id:
@@ -21,36 +21,23 @@ properties:
   machineId:
     type: integer
     format: int64
-  dateCall:
+  dateVisite:
     type: string
     format: date
-  dateFix:
+  comments:
     type: string
-    format: date
-  problem:
-    type: string
-  solution:
-    type: string
-  priority:
+  th:
     type: integer
     format: int64
-  initiator:
-    type: string
-  ratingClient:
+  tempWashing:
     type: integer
     format: int64
-  ratingTech:
+  tempRinsing:
     type: integer
     format: int64
-  interventions:
-    type: array
-    items:
-      $ref: "#/components/schemas/Interventions"
-  interventionsId:
-    type: array
-    items:
-      type: integer
-      format: int64
+  conductivity:
+    type: integer
+    format: int64
   createdAt:
     type: string
     format: date

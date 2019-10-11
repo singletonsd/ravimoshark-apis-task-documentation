@@ -1,9 +1,9 @@
 get:
   tags:
-    - "Tasks"
-  summary: "Get all tasks."
-  description: "Get all tasks."
-  operationId: "getTasks"
+    - "Visits"
+  summary: "Get all visits."
+  description: "Get all visits."
+  operationId: "getVisits"
   parameters:
     - $ref: "#/components/parameters/Skip"
     - $ref: "#/components/parameters/Limit"
@@ -29,7 +29,7 @@ get:
               items:
                 type: "array"
                 items:
-                  $ref: "#/components/schemas/Tasks"
+                  $ref: "#/components/schemas/Visits"
     204:
       $ref: "#/components/responses/204"
     400:
@@ -40,26 +40,26 @@ get:
       $ref: "#/components/responses/404"
     405:
       $ref: "#/components/responses/405"
-  x-swagger-router-controller: "Tasks"
+  x-swagger-router-controller: "Visits"
 post:
   tags:
-    - "Tasks"
-  summary: "Add one task."
-  description: "Add one task."
-  operationId: "addTask"
+    - "Visits"
+  summary: "Add one visit."
+  description: "Add one visit."
+  operationId: "addVisit"
   requestBody:
     required: true
     content:
       application/json:
         schema:
-          $ref: "#/components/schemas/Tasks"
+          $ref: "#/components/schemas/Visits"
   responses:
     200:
       description: "Request OK."
       content:
         application/json:
           schema:
-            $ref: "#/components/schemas/Tasks"
+            $ref: "#/components/schemas/Visits"
     400:
       $ref: "#/components/responses/400"
     401:
@@ -68,26 +68,26 @@ post:
       $ref: "#/components/responses/404"
     405:
       $ref: "#/components/responses/405"
-  x-swagger-router-controller: "Tasks"
+  x-swagger-router-controller: "Visits"
 put:
   tags:
-    - "Tasks"
-  summary: "Edit one task."
-  description: "Edit one task."
-  operationId: "editTask"
+    - "Visits"
+  summary: "Edit one visit."
+  description: "Edit one visit."
+  operationId: "editVisit"
   requestBody:
     required: true
     content:
       application/json:
         schema:
-          $ref: "#/components/schemas/Tasks"
+          $ref: "#/components/schemas/Visits"
   responses:
     200:
       description: "Request OK."
       content:
         application/json:
           schema:
-            $ref: "#/components/schemas/Tasks"
+            $ref: "#/components/schemas/Visits"
     400:
       $ref: "#/components/responses/400"
     401:
@@ -96,4 +96,4 @@ put:
       $ref: "#/components/responses/404"
     405:
       $ref: "#/components/responses/405"
-  x-swagger-router-controller: "Tasks"
+  x-swagger-router-controller: "Visits"
