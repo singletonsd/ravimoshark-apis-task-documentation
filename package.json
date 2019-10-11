@@ -4,6 +4,7 @@
   "dependencies": {},
   "private": true,
   "scripts": {
+    "check": "npm-check",
     "start": "swagger-repo serve -b src",
     "clear-watcher": "echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p",
     "static": "npm run build && static dist",
@@ -17,6 +18,7 @@
   "devDependencies": {
     "create-openapi-repo": "2.0.0-rc.7",
     "node-static": "0.7.11",
+    "npm-check": "5.9.0",
     "swagger-repo": "2.0.0-rc.15"
   }
 }
