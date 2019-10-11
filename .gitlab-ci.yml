@@ -40,9 +40,9 @@ pages:
     refs:
       - master
     changes:
-      - spec/**/*
+      - src/**/*
       - .gitlab-ci.yml
-      - package.json
+      - "*.json"
 
 trigger_libs:
   stage: notify
@@ -54,8 +54,8 @@ trigger_libs:
     refs:
       - master
     changes:
-      - spec/**/*
+      - src/**/*
       - .gitlab-ci.yml
-      - package.json
+      - "*.json"
     variables:
       - $CI_PROJECT_PATH == $ORIGINAL_REPOSITORY
