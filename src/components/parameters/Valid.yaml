@@ -1,6 +1,0 @@
-name: "valid"
-description: "Only valid data."
-in: "query"
-required: false
-schema:
-  $ref: "#/components/schemas/Valid"

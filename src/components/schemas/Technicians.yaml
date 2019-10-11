@@ -1,0 +1,13 @@
+description: Technician information.
+type: object
+properties:
+  id:
+    type: integer
+    format: int64
+  name:
+    type: string
+  sector:
+    type: integer
+    format: int64
+  email:
+    type: string

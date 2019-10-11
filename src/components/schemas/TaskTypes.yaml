@@ -1,0 +1,10 @@
+description: Type of task.
+type: string
+default: UNKNOWN
+enum:
+  - CANCELLATION
+  - CHANGE_PIECE
+  - STOP_PARCIAL
+  - STOP_TOTAL
+  - PROBLEM_RESULT
+  - UNKNOWN

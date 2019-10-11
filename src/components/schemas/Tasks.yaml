@@ -1,0 +1,38 @@
+description: Client minimum information.
+type: object
+properties:
+  id:
+    type: integer
+    format: int64
+  addressId:
+    type: integer
+    format: int64
+  address:
+    $ref: "#/components/schemas/Addresses"
+  technianId:
+    type: integer
+    format: int64
+  technian:
+    $ref: "#/components/schemas/Technicians"
+  taskType:
+    $ref: "#/components/schemas/TaskTypes"
+  machine:
+    $ref: "#/components/schemas/Machines"
+  machineId:
+    type: integer
+    format: int64
+  problem:
+    type: string
+  solution:
+    type: string
+  priority:
+    type: integer
+    format: int64
+  initiator:
+    type: string
+  ratingClient:
+    type: integer
+    format: int64
+  ratingTech:
+    type: integer
+    format: int64

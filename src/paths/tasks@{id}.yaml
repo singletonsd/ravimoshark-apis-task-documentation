@@ -1,0 +1,49 @@
+get:
+  tags:
+    - "Tasks"
+  summary: "Get one task."
+  description: "Get one task."
+  operationId: "getById"
+  parameters:
+    - $ref: "#/components/parameters/Id"
+    - $ref: "#/components/parameters/Deleted"
+  responses:
+    200:
+      description: "Request OK."
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/Tasks"
+    400:
+      $ref: "#/components/responses/400"
+    401:
+      $ref: "#/components/responses/401"
+    404:
+      $ref: "#/components/responses/404"
+    405:
+      $ref: "#/components/responses/405"
+  x-swagger-router-controller: "Tasks"
+delete:
+  tags:
+    - "Tasks"
+  summary: "Delete one task."
+  description: "Delete one task."
+  operationId: "delete"
+  parameters:
+    - $ref: "#/components/parameters/Id"
+  responses:
+    200:
+      description: "Request OK."
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/IdInteger"
+    400:
+      $ref: "#/components/responses/400"
+    401:
+      $ref: "#/components/responses/401"
+    404:
+      $ref: "#/components/responses/404"
+    405:
+      $ref: "#/components/responses/405"
+  x-swagger-router-controller: "Tasks"
