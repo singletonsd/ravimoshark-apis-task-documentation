@@ -1,0 +1,7 @@
+name: "finished"
+in: "query"
+description: "Get all, finished or unfinished task. Default not finished."
+required: false
+schema:
+  $ref: "#/components/schemas/Finished"
+  default: ACTIVE

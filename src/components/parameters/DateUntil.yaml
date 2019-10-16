@@ -1,0 +1,7 @@
+name: "dateUntil"
+in: "query"
+description: "Date until"
+required: false
+schema:
+  type: string
+  format: date

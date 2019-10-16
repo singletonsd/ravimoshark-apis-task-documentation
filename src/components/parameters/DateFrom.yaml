@@ -1,0 +1,7 @@
+name: "dateFrom"
+in: "query"
+description: "Date from"
+required: false
+schema:
+  type: string
+  format: date

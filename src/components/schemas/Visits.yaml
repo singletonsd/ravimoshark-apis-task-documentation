@@ -9,10 +9,10 @@ properties:
     format: int64
   address:
     $ref: "#/components/schemas/Addresses"
-  technianId:
+  technicianId:
     type: integer
     format: int64
-  technian:
+  technician:
     $ref: "#/components/schemas/Technicians"
   taskType:
     $ref: "#/components/schemas/TaskTypes"
@@ -21,7 +21,7 @@ properties:
   machineId:
     type: integer
     format: int64
-  dateVisite:
+  dateVisit:
     type: string
     format: date
   comments:

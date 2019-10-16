@@ -1,0 +1,7 @@
+name: "dateFixFrom"
+in: "query"
+description: "Date fix from"
+required: false
+schema:
+  type: string
+  format: date

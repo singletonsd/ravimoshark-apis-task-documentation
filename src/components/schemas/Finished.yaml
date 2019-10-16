@@ -1,0 +1,6 @@
+type: string
+default: FINISHED
+enum:
+  - ALL
+  - FINISHED
+  - UNFINISHED

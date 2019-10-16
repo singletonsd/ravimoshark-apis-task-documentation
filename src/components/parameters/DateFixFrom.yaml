@@ -1,0 +1,7 @@
+name: "dateCallFrom"
+in: "query"
+description: "Date call from"
+required: false
+schema:
+  type: string
+  format: date

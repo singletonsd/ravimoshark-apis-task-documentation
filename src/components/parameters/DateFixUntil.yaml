@@ -1,0 +1,7 @@
+name: "dateFixUntil"
+in: "query"
+description: "Date fix until"
+required: false
+schema:
+  type: string
+  format: date

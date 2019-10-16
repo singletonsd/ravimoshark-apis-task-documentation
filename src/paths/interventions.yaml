@@ -1,9 +1,9 @@
 get:
   tags:
-    - "Tasks"
-  summary: "Get all tasks."
-  description: "Get all tasks."
-  operationId: "getTasks"
+    - "Interventions"
+  summary: "Get all interventions."
+  description: "Get all interventions."
+  operationId: "getInterventions"
   parameters:
     - $ref: "#/components/parameters/Skip"
     - $ref: "#/components/parameters/Limit"
@@ -14,10 +14,8 @@ get:
     - $ref: "#/components/parameters/RefClientQuery"
     - $ref: "#/components/parameters/Finished"
     - $ref: "#/components/parameters/TechnicianIdQuery"
-    - $ref: "#/components/parameters/DateCallFrom"
-    - $ref: "#/components/parameters/DateCallUntil"
-    - $ref: "#/components/parameters/DateFixFrom"
-    - $ref: "#/components/parameters/DateFixUntil"
+    - $ref: "#/components/parameters/DateFrom"
+    - $ref: "#/components/parameters/DateUntil"
   responses:
     200:
       description: "Request OK."
@@ -35,7 +33,7 @@ get:
               items:
                 type: "array"
                 items:
-                  $ref: "#/components/schemas/Tasks"
+                  $ref: "#/components/schemas/Interventions"
     204:
       $ref: "#/components/responses/204"
     400:
@@ -46,26 +44,26 @@ get:
       $ref: "#/components/responses/404"
     405:
       $ref: "#/components/responses/405"
-  x-swagger-router-controller: "Tasks"
+  x-swagger-router-controller: "Interventions"
 post:
   tags:
-    - "Tasks"
-  summary: "Add one task."
-  description: "Add one task."
-  operationId: "addTask"
+    - "Interventions"
+  summary: "Add one intervention."
+  description: "Add one intervention."
+  operationId: "addIntervention"
   requestBody:
     required: true
     content:
       application/json:
         schema:
-          $ref: "#/components/schemas/Tasks"
+          $ref: "#/components/schemas/Interventions"
   responses:
     200:
       description: "Request OK."
       content:
         application/json:
           schema:
-            $ref: "#/components/schemas/Tasks"
+            $ref: "#/components/schemas/Interventions"
     400:
       $ref: "#/components/responses/400"
     401:
@@ -74,26 +72,26 @@ post:
       $ref: "#/components/responses/404"
     405:
       $ref: "#/components/responses/405"
-  x-swagger-router-controller: "Tasks"
+  x-swagger-router-controller: "Interventions"
 put:
   tags:
-    - "Tasks"
-  summary: "Edit one task."
-  description: "Edit one task."
-  operationId: "editTask"
+    - "Interventions"
+  summary: "Edit one intervention."
+  description: "Edit one intervention."
+  operationId: "editIntervention"
   requestBody:
     required: true
     content:
       application/json:
         schema:
-          $ref: "#/components/schemas/Tasks"
+          $ref: "#/components/schemas/Interventions"
   responses:
     200:
       description: "Request OK."
       content:
         application/json:
           schema:
-            $ref: "#/components/schemas/Tasks"
+            $ref: "#/components/schemas/Interventions"
     400:
       $ref: "#/components/responses/400"
     401:
@@ -102,4 +100,4 @@ put:
       $ref: "#/components/responses/404"
     405:
       $ref: "#/components/responses/405"
-  x-swagger-router-controller: "Tasks"
+  x-swagger-router-controller: "Interventions"

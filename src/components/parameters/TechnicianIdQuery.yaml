@@ -1,0 +1,6 @@
+name: "technicianId"
+description: "Data from a desired technician"
+in: "query"
+required: false
+schema:
+  type: "string"

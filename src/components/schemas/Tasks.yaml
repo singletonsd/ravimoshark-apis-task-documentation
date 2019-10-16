@@ -9,10 +9,10 @@ properties:
     format: int64
   address:
     $ref: "#/components/schemas/Addresses"
-  technianId:
+  technicianId:
     type: integer
     format: int64
-  technian:
+  technician:
     $ref: "#/components/schemas/Technicians"
   taskType:
     $ref: "#/components/schemas/TaskTypes"
@@ -36,6 +36,9 @@ properties:
     format: int64
   initiator:
     type: string
+  taskTime:
+    type: integer
+    format: int64
   ratingClient:
     type: integer
     format: int64
