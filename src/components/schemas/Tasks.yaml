@@ -36,6 +36,9 @@ properties:
     format: int64
   initiator:
     $ref: '#/components/schemas/Technicians'
+  initiatorId:
+    type: integer
+    format: int64
   taskTime:
     type: integer
     format: int64
