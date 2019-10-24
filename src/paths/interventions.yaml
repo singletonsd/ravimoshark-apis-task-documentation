@@ -12,8 +12,8 @@ get:
     - $ref: "#/components/parameters/Deleted"
     - $ref: "#/components/parameters/Metadata"
     - $ref: "#/components/parameters/RefClientQuery"
-    - $ref: "#/components/parameters/Finished"
     - $ref: "#/components/parameters/TechnicianIdQuery"
+    - $ref: "#/components/parameters/TaskIdQuery"
     - $ref: "#/components/parameters/DateFrom"
     - $ref: "#/components/parameters/DateUntil"
   responses:

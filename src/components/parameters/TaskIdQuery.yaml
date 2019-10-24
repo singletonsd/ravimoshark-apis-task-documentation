@@ -1,5 +1,5 @@
-name: "technicianId"
-description: "Id from a desired technician"
+name: "taskId"
+description: "Id of the task associated"
 in: "query"
 required: false
 schema:

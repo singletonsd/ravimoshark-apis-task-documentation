@@ -13,6 +13,8 @@ get:
     - $ref: "#/components/parameters/Metadata"
     - $ref: "#/components/parameters/RefClientQuery"
     - $ref: "#/components/parameters/TechnicianIdQuery"
+    - $ref: "#/components/parameters/DateFrom"
+    - $ref: "#/components/parameters/DateUntil"
   responses:
     200:
       description: "Request OK."
